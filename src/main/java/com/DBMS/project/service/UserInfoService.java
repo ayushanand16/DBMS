@@ -34,7 +34,7 @@ public class UserInfoService implements UserDetailsService {
     public String addUser(User userInfo) { 
         userInfo.setPassword(encoder.encode(userInfo.getPassword())); 
         repository.save(userInfo); 
-        return "redirect:/login"; 
+        return "redirect:/"; 
     } 
   
   

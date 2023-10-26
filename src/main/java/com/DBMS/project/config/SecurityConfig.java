@@ -39,7 +39,7 @@ public class SecurityConfig {
                 .and()
                 .authorizeHttpRequests().requestMatchers("/clients/**","/create-checkout-session","/success/**").hasAuthority("ROLE_CLIENT")
                 .and()
-                .authorizeHttpRequests().requestMatchers("/offers/**","/admin/**").hasAuthority("ROLE_ADMIN")
+                .authorizeHttpRequests().requestMatchers("/offers/**","/admin/**","/register/admin").hasAuthority("ROLE_ADMIN")
                 .and()
                 .authorizeHttpRequests().requestMatchers("/").authenticated()
                 .and()

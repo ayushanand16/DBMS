@@ -89,7 +89,7 @@ public class CheckoutController {
 
         } catch (StripeException e) {
             System.out.println(e);
-            return "home";
+            return "redirect:/";
         }
 
     }
