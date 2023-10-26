@@ -55,13 +55,13 @@
     position: relative;
     text-decoration: underline;
     font-weight: 300;
-    width: 132px;
+    width: 120px;
   }
   .readings {
     margin-left: -32px;
   }
   .frame2 {
-    width: 700px;
+    width: 800px;
     gap: 22px;
   }
   .frame,
