@@ -33,7 +33,7 @@ public class CartRepository {
         jdbcTemplate.update("insert into cart (client) values (?)", clientId);
     }
     public void addProduct(long id, long clientId) {
-        jdbcTemplate.update("INSERT INTO Cartproduct (clientId, productId) values (?, ?)",clientId,id);
+        jdbcTemplate.update("INSERT INTO cartproduct (clientId, productId) values (?, ?)",clientId,id);
     }
 
     public void deleteProduct(long id, long clientId) {
