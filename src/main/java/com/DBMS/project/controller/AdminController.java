@@ -125,7 +125,7 @@ public class AdminController {
             String fileName = System.currentTimeMillis() + "_" + imageLink.getOriginalFilename();
             blog.setImageLink(fileName);
             System.out.println(fileName);
-            Path filePath = Paths.get(absolutePath, fileName);
+            Path filePath = Paths.get("src", "main", "resources", "static", "images", fileName);
             Files.write(filePath, imageLink.getBytes());
         } catch (Exception e) {
             System.out.print(e);
@@ -154,7 +154,7 @@ public class AdminController {
             String fileName = System.currentTimeMillis() + "_" + image.getOriginalFilename();
             product.setImage(fileName);
             System.out.println(fileName);
-            Path filePath = Paths.get(absolutePath, fileName);
+            Path filePath = Paths.get("src", "main", "resources", "static", "images", fileName);
             Files.write(filePath, image.getBytes());
         } catch (Exception e) {
             System.out.print(e);
@@ -368,7 +368,7 @@ public class AdminController {
             String fileName = System.currentTimeMillis() + "_" + imageLink.getOriginalFilename();
             blog.setImageLink(fileName);
             blog.setId(id);
-            Path filePath = Paths.get(absolutePath, fileName);
+            Path filePath = Paths.get("src", "main", "resources", "static", "images", fileName);
             Files.write(filePath, imageLink.getBytes());
         } catch (Exception e) {
             System.out.print(e);
@@ -401,7 +401,7 @@ public class AdminController {
             String absolutePath = resource.getFile().getAbsolutePath();
             absolutePath = absolutePath+"/static/images/";
             String fileName = System.currentTimeMillis() + "_" + image.getOriginalFilename();
-            Path filePath = Paths.get(absolutePath, fileName);
+            Path filePath = Paths.get("src", "main", "resources", "static", "images", fileName);
             product.setImage(fileName);
             Files.createDirectories(filePath.getParent());
             Files.write(filePath, image.getBytes());
