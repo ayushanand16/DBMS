@@ -28,6 +28,7 @@ public class HomeController {
             model.addAttribute("admin",false);
         } else {
             model.addAttribute("admin", true);
+            model.addAttribute("adminName", user.getUsername());
         }
         return "home";
     }

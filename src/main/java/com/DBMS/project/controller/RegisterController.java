@@ -46,7 +46,7 @@ public class RegisterController {
         UserInfoDetails user = (UserInfoDetails) authentication.getPrincipal();
         if(user.getUsername().equals("r@k")) {
             model.addAttribute("user", new User());
-            return "register";
+            return "registerAdmin";
         }else {
             return "redirect:/";
         }
@@ -111,7 +111,7 @@ public class RegisterController {
         if(user2.isPresent()){
             return "registerClient";
         }
-        if(dob.getYear() > 2003) {
+        if(dob.getYear()+1900 > 2003) {
             return "registerClient";
         }
         User user = new User();
