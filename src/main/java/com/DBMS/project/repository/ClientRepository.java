@@ -64,7 +64,7 @@ public class ClientRepository {
     @Deprecated
     public List<Product> findProducts(long id) {
         return jdbcTemplate.query(
-                "SELECT * FROM product where product.id in (SELECT DISTINCT productId as id FROM soldProduct where transactionId in (SELECT id from transaction where customer = ?))",
+                "SELECT * FROM product where product.id in (SELECT DISTINCT productId as id FROM soldproduct where transactionId in (SELECT id from transaction where customer = ?))",
                 new Object[] { id }, new BeanPropertyRowMapper<>(Product.class));
     }
 
@@ -86,7 +86,7 @@ public class ClientRepository {
     @Deprecated
     public Optional<Product> getProduct(long id, long clientId) {
         List<Product> products = jdbcTemplate.query(
-                "SELECT * FROM product where product.id = ? and product.id in (SELECT DISTINCT productId as id FROM soldProduct where transactionId in (SELECT id from transaction where customer = ?))",
+                "SELECT * FROM product where product.id = ? and product.id in (SELECT DISTINCT productId as id FROM soldproduct where transactionId in (SELECT id from transaction where customer = ?))",
                 new Object[] { id, clientId }, new BeanPropertyRowMapper<>(Product.class));
         return (products.isEmpty() ? Optional.empty() : Optional.of(products.get(0)));
     }
@@ -111,7 +111,7 @@ public class ClientRepository {
     }
 
     public void addProduct(long id, Product product) {
-        jdbcTemplate.update("insert into soldProduct (transactionId, productId) values (?,?)", id, product.getId());
+        jdbcTemplate.update("insert into soldproduct (transactionId, productId) values (?,?)", id, product.getId());
     }
 
     public void addReading(CartReading reading, long key) {
