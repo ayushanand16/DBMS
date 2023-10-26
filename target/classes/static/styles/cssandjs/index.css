@@ -1,0 +1,354 @@
+.unlock-your-celestial {
+    margin: 0;
+  }
+  .navigate-the-cosmos {
+    margin: 0;
+    font-size: 40px;
+  }
+  .unlock-your-celestial-container {
+    position: relative;
+    font-weight: 800;
+    display: inline-block;
+    width: 648px;
+    height: 227px;
+    flex-shrink: 0;
+  }
+  .unlock-your-celestial-destiny-wrapper {
+    position: absolute;
+    top: 98px;
+    left: 0;
+    background-color: var(--color-midnightblue-200);
+    width: 1512px;
+    height: 619px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 170px 50px;
+    box-sizing: border-box;
+    font-size: var(--font-size-51xl);
+  }
+  .astrology1 {
+    font-weight: 600;
+  }
+  .span {
+    text-decoration: underline;
+    font-weight: 300;
+  }
+  .astrology,
+  .products,
+  .readings {
+    display: inline-block;
+    height: 44px;
+    flex-shrink: 0;
+  }
+  .astrology {
+    position: undefined;
+    width: 49px;
+    margin-top: 5px;
+  }
+  .products,
+  .readings {
+    position: relative;
+    text-decoration: underline;
+    font-weight: 300;
+    width: 132px;
+  }
+  .readings {
+    margin-left: -32px;
+  }
+  .frame2,
+  .frame3 {
+    height: 44px;
+    flex-shrink: 0;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .frame3 {
+    width: 232px;
+    overflow: hidden;
+    display: flex;
+  }
+  .frame2 {
+    width: 700px;
+    gap: 22px;
+  }
+  .frame,
+  .frame1,
+  .frame2 {
+    overflow: hidden;
+    display: flex;
+  }
+  .frame1 {
+    width: 1456px;
+    height: 80px;
+    flex-shrink: 0;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 500px;
+  }
+  .frame {
+    position: absolute;
+    top: 17px;
+    left: 0;
+    width: 1485px;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    color: var(--color-blue);
+  }
+  .schedule-a-reading {
+    position: relative;
+    font-weight: 800;
+    display: inline-block;
+    width: 275px;
+    height: 70px;
+    flex-shrink: 0;
+  }
+  .schedule-a-reading-wrapper {
+    border-radius: var(--br-7xl);
+    background-color: var(--color-midnightblue-100);
+    width: 349px;
+    height: 136px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 18px 0;
+    box-sizing: border-box;
+  }
+  .frame5,
+  .why-choose-us {
+    height: 180px;
+    flex-shrink: 0;
+  }
+  .why-choose-us {
+    position: relative;
+    font-size: var(--font-size-17xl);
+    font-weight: 800;
+    color: var(--color-black);
+    display: inline-block;
+    width: 761px;
+  }
+  .frame5 {
+    width: 1306px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 196px;
+  }
+  .explore-courses-wrapper,
+  .frame4 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .frame4 {
+    position: absolute;
+    top: 786px;
+    left: 0;
+    width: 1467px;
+    overflow: hidden;
+    justify-content: center;
+  }
+  .explore-courses-wrapper {
+    border-radius: var(--br-7xl);
+    background-color: var(--color-midnightblue-100);
+    width: 349px;
+    height: 136px;
+    justify-content: flex-end;
+    padding: 25px 15px;
+    box-sizing: border-box;
+  }
+  .want-to-enter {
+    position: undefined;
+    font-size: var(--font-size-17xl);
+    font-weight: 800;
+    color: var(--color-black);
+    display: inline-block;
+    width: 465px;
+    height: 433px;
+    flex-shrink: 0;
+    margin-top: 32px;
+  }
+  .frame6,
+  .frame7 {
+    overflow: hidden;
+    display: flex;
+  }
+  .frame7 {
+    width: 1306px;
+    height: 465px;
+    flex-shrink: 0;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 246px;
+  }
+  .frame6 {
+    position: absolute;
+    top: 1885px;
+    left: 0;
+    width: 1467px;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+  }
+  .view-products,
+  .we-believe-in {
+    position: relative;
+    font-weight: 800;
+    display: inline-block;
+    width: 796px;
+    height: 409px;
+    flex-shrink: 0;
+  }
+  .view-products {
+    width: 222.8px;
+    height: 58.2px;
+  }
+  .view-products-wrapper {
+    border-radius: var(--br-7xl);
+    background-color: var(--color-white);
+    width: 253px;
+    height: 113px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 13.838233947753906px 10.186248779296875px;
+    box-sizing: border-box;
+    position: undefined;
+    margin-top: 44px;
+    font-size: var(--font-size-9xl);
+    color: var(--color-midnightblue-100);
+  }
+  .frame-child,
+  .frame8 {
+    background-color: var(--color-midnightblue-200);
+    width: 1512px;
+    height: 612px;
+  }
+  .frame8 {
+    position: absolute;
+    top: 1147px;
+    left: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 194px 74px;
+    box-sizing: border-box;
+    gap: 164px;
+    font-size: var(--font-size-23xl);
+  }
+  .frame-child {
+    position: relative;
+  }
+  .frame-item {
+    position: undefined;
+    background-color: var(--color-black);
+    width: 723px;
+    height: 112px;
+    margin-top: 611px;
+  }
+  .frame10 {
+    width: 1512px;
+    height: 723px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .copyright-2023,
+  .explore-the-world {
+    left: 0;
+    font-weight: 800;
+    display: inline-block;
+    width: 573px;
+    height: 375px;
+    margin-top: 198px;
+  }
+  .copyright-2023 {
+    font-size: var(--font-size-9xl);
+    font-weight: 300;
+    width: 692px;
+    height: 50px;
+    margin-top: 642px;
+    margin-left: -176px;
+  }
+  .frame12 {
+    width: 922px;
+    height: 692px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .read-blog {
+    position: absolute;
+    top: 41px;
+    left: 53px;
+    font-weight: 800;
+    display: inline-block;
+    width: 234.8px;
+    height: 58.2px;
+  }
+  .read-blog-wrapper {
+    position: relative;
+    left: 0;
+    border-radius: var(--br-7xl);
+    background-color: var(--color-white);
+    width: 362px;
+    height: 113px;
+    margin-top: 249px;
+    margin-left: 250px;
+    margin-right: 190px;
+    font-size: var(--font-size-9xl);
+    color: var(--color-midnightblue-100);
+  }
+  .frame11,
+  .frame9 {
+    background-color: var(--color-midnightblue-200);
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .frame11 {
+    width: 1209px;
+    height: 692px;
+    flex-shrink: 0;
+    justify-content: flex-start;
+    margin-left: -1389px;
+  }
+  .frame9 {
+    position: absolute;
+    top: 2365px;
+    left: 0;
+    width: 1512px;
+    height: 723px;
+    justify-content: flex-end;
+    font-size: var(--font-size-23xl);
+  }
+  .macbook-pro-14-1 {
+    position: relative;
+    background-color: var(--color-white);
+    width: 100%;
+    height: 3088px;
+    overflow: hidden;
+    text-align: left;
+    font-size: var(--font-size-9xl);
+    color: var(--color-white);
+    font-family: var(--font-inter);
+  }
+  

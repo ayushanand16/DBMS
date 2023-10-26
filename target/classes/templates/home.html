@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" type="text/css" href="/styles/cssandjs/global.css" />
+    <link rel="stylesheet" type="text/css" href="/styles/cssandjs/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;800&display=swap"
+    />
+  </head>
+  <body>
+    <div class="macbook-pro-14-1">
+      <div class="unlock-your-celestial-destiny-wrapper">
+        <div class="unlock-your-celestial-container">
+          <p class="unlock-your-celestial">Unlock Your Celestial Destiny</p>
+          <p class="unlock-your-celestial">&nbsp;</p>
+          <p class="unlock-your-celestial"></p>
+          <p class="navigate-the-cosmos">Navigate the Cosmos with us.</p>
+        </div>
+      </div>
+      <div class="frame">
+        <div class="frame1">
+          <div class="astrology">
+            <a href="/"><span class="astrology1">Astrology</span></a>
+            <a href="/logout" style="color: blue;">Logout</a>
+            <span class="span"> </span>
+          </div>
+          <div class="frame2">
+            <a th:href="@{/products/all}" th:unless="${admin}"><div class="products" >Products</div></a>
+              <a th:href="@{/admin/products/add}" th:if="${admin}"><div class="products" >Products</div></a>
+              <a th:href="@{/courses/all}" th:unless="${admin}"><div class="products">Courses</div></a>
+              <a th:href="@{/admin/courses/add}" th:if="${admin}"><div class="products">Courses</div></a>
+              <a th:href="@{/clients/orders}" th:unless="${admin}"><div class="products">Orders</div></a>
+              <a th:href="@{/clients/readings/add}" th:unless="${admin}"> <div class="products">Readings</div></a>
+              <a th:href="@{/clients/cart}" th:unless="${admin}"><div class="products">Cart</div></a>
+              <a th:href="@{/blogs/all}" th:unless="${admin}"><div class="products">Blogs</div></a>
+              <a th:href="@{/admin/blogs/add}" th:if="${admin}"><div class="products">Blogs</div></a>
+              <a th:href="@{/admin/offers/add}" th:if="${admin}"> <div class="products">Offers</div></a>
+          </div>
+        </div>
+      </div>
+      <div class="frame4">
+        <div class="frame5">
+          <div class="schedule-a-reading-wrapper" th:unless="${admin}">
+            <a th:href="@{/clients/readings/add}" ><div class="schedule-a-reading">Schedule a Reading</div></a>
+          </div>
+          <div class="why-choose-us">
+            Why choose us? Our team of experienced astrologers goes beyond the
+            surface, delving into the unique interplay of planets and cosmic
+            forces shaping your life. Trust us to deliver accurate, insightful,
+            and empowering astrological readings tailored just for you.
+          </div>
+          <div class="schedule-a-reading-wrapper" th:if="${admin}">
+            <a th:href="@{/admin/offers/add}" ><div class="schedule-a-reading">Device an Offer</div></a>
+          </div>
+          <div class="why-choose-us">
+            Help users to choose our team of experienced astrologers goes beyond the
+            surface, delving into the unique interplay of planets and cosmic
+            forces shaping your life. Trust us to deliver accurate, insightful,
+            and empowering astrological readings tailored just for you.
+          </div>
+        </div>
+      </div>
+      <div class="frame6">
+        <div class="frame7">
+          <div class="explore-courses-wrapper">
+            <a th:href="@{/courses/all}"><div class="schedule-a-reading">Explore Courses</div></a>
+          </div>
+          <div class="want-to-enter">
+            Want to enter and explore the world of astrology. We have curated
+            courses that help you master the art and open new possiblities.
+          </div>
+        </div>
+      </div>
+      <div class="frame8">
+        <div class="we-believe-in">
+          We believe in the power of the stars to illuminate your path. Our
+          celestial guides are here to decode the cosmic signals and reveal the
+          secrets written in the constellations.
+        </div>
+        <div class="view-products-wrapper">
+          <a th:href="@{/products/all}"><div class="view-products">View Products</div></a>
+        </div>
+      </div>
+      <div class="frame9">
+            <div class="explore-the-world">
+              Explore the world of astrology with the blogs written by the
+              expert in the field.
+            </div>
+            <div class="read-blog-wrapper">
+              <a th:href="@{/blogs/all}"><div class="read-blog">Read Blogs</div></a>
+            </div>
+    </div>
+  </body>
+</html>

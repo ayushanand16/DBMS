@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="/styles/cssandjs/registerclient.css" />
+    <link rel="stylesheet" href="/styles/cssandjs/global.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;700;800&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=IBM Plex Sans:wght@400&display=swap"
+    />
+  </head>
+  <body>
+    <div class="macbook-air-1">
+      <div class="frame13">
+        <div class="frame1">
+          <div class="astrology">
+            <a href="/"><span class="astrology1">Astrology</span></a>
+            <span class="span"> </span>
+          </div>
+          <div class="frame2">
+            <a th:href="@{/admin/products/add}"><div class="products" >Products</div></a>
+            <a th:href="@{/admin/courses/add}"><div class="products">Courses</div></a>
+            <div class="frame3">
+              <a th:href="@{/admin/blogs/add}"><div class="products">Blogs</div></a>
+            <a th:href="@{/admin/offers/add}"> <div class="readings">Offers</div></a>
+            </div>
+          </div>
+        </div>
+        <div class="hey-there-container">
+          <p class="hey-there">Products!!!</p>
+          <p class="blank-line1">
+            <span class="blank-line2">
+              <span>&nbsp;</span>
+            </span>
+          </p>
+          <p class="blank-line1">
+            <span class="blank-line2">
+              <span>&nbsp;</span>
+            </span>
+          </p>
+          <p class="blank-line1">
+            <span class="blank-line2">
+              <span>&nbsp;</span>
+            </span>
+          </p>
+          <p class="begin-your-journey-with-us-by">
+            <span class="blank-line2">
+              <span th:if="${edit}"
+                >Edit a previous product</span>
+              <span th:unless="${edit}"> Add a new product and expand our inventory</span>
+            </span>
+          </p>
+          <div class="view-products-wrapper">
+            <a th:href="@{/admin/products}"><div class="view-products">Manage</div></a>
+          </div>
+          <p class="blank-line1">
+            <span class="blank-line2">
+              <span>&nbsp;</span>
+            </span>
+          </p>
+          <p class="blank-line1">
+            <span class="blank-line2">
+              <span>&nbsp;</span>
+            </span>
+          </p>
+          <p class="blank-line1">
+            <span class="blank-line2">
+              <span>&nbsp;</span>
+            </span>
+          </p>
+        </div>
+      </div>
+      <div class="frame14">
+        <div>
+          <div>
+            <b class="register">Product</b>
+          </div>
+          <form th:action="${edit} ? '/admin/products/edit/' + ${product.id} : '/admin/products/add'" method="post" enctype="multipart/form-data">
+          <div class="text-input">
+            <div class="label">Name*</div>
+            <input
+              class="label text-block"
+              type="Text"
+              name="name"
+              placeholder= "Name of Product"
+              th:value = "${product.name}"
+              required
+            />
+          </div>
+          <div class="text-input">
+            <div class="label">Cost*</div>
+            <input
+              class="label text-block"
+              type="Text"
+              name="cost"
+              placeholder= "Cost of Product"
+              th:value = "${product.cost}"
+              required
+            />
+          </div>
+          <div class="text-input">
+            <div class="label">stocksAvailable*</div>
+            <input
+              class="label text-block"
+              type="Text"
+              name="stocksAvailable"
+              placeholder= "Stocks of Product"
+              th:value = "${product.stocksAvailable}"
+              required
+            />
+          </div>
+          <div class="text-input">
+            <div class="label">Image*</div>
+            <input
+              class="label text-block"
+              type="file"
+              name="image"
+              placeholder= "Image of Product"
+              th:value = "${product.image}"
+              required
+            />
+          </div>
+          <button th:if="${edit}" class="register-button" type="submit">
+              Edit
+          </button>
+          <button th:unless="${edit}" class="register-button" type="submit">
+            Create
+        </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

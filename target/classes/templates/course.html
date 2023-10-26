@@ -1,0 +1,81 @@
+</html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="/styles/cssandjs/registerclient.css" />
+    <link rel="stylesheet" href="/styles/cssandjs/global.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;700;800&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=IBM Plex Sans:wght@400&display=swap"
+    />
+  </head>
+  <body>
+    <div class="macbook-air-1">
+      <div class="frame13">
+        <div class="frame1">
+          <div class="astrology">
+            <a href="/"><span class="astrology1">Astrology</span></a>
+            <span class="span"> </span>
+          </div>
+          <div class="frame2">
+            <a th:href="@{/products/all}" th:unless="${admin}"><div class="products" >Products</div></a>
+            <a th:href="@{/admin/products/add}" th:if="${admin}"><div class="products" >Products</div></a>
+            <a th:href="@{/courses/all}" th:unless="${admin}"><div class="products">Courses</div></a>
+            <a th:href="@{/admin/courses/add}" th:if="${admin}"><div class="products">Courses</div></a>
+            <a th:href="@{/clients/orders}" th:unless="${admin}"><div class="products">Orders</div></a>
+            <div class="frame3">
+              <a th:href="@{/blogs/all}" th:unless="${admin}"><div class="products">Blogs</div></a>
+              <a th:href="@{/admin/blogs/add}" th:if="${admin}"><div class="products">Blogs</div></a>
+              <a th:href="@{/clients/readings/add}" th:unless="${admin}"> <div class="readings">Readings</div></a>
+              <a th:href="@{/admin/offers/add}" th:if="${admin}"> <div class="readings">Offers</div></a>
+              <a th:href="@{/clients/cart}" th:unless="${admin}"><div class="products">Cart</div></a>
+            </div>
+          </div>
+        </div>
+        <div> Course</div>
+          <div
+            class="container"
+            style="background: url(https://i.pinimg.com/564x/6f/5a/b1/6f5ab1b470beeeeaf285bb451c63ac8f.jpg); width:437px;"
+          ></div>
+          <form th:unless="${admin}" th:action="@{/clients/courses/add/{id}(id=${course.id})}"
+              style="margin-top: 10px;" method="post"><button class="view-products">Add To Cart</button></form
+            >
+          <div th:if="${admin}" class="view-products-wrapper" style="height:5rem;">
+            <a  th:href="@{/admin/courses/edit/{id}(id=${course.id})}"
+              ><div class="view-products">Edit</div></a
+            >
+          </div>
+          <p class="blank-line1">
+            <span class="blank-line2">
+              <span>&nbsp;</span>
+            </span>
+          </p>
+      </div>
+      <div class="frame14">
+          <div>
+            <p style="font-weight: 900; font-size: xx-large;" th:text="${course.courseName}"></p>
+            <p style="font-size:x-large" th:text="'₹ '+${course.price}"></p>
+            <p style="font-size:x-large" th:text="${course.courseDuration}+' Days'"></p>
+            <p style="font-size:x-large" th:text="'Reviews'"></p>
+            <div style="display: flex; flex-direction: column;">
+                <div class="blog_post" th:each="review : ${reviews}">
+                    <div class="container_copy">
+                      <h3 th:text="${review.date}+' '+${review.firstname}+' '+${review.lastname}">12 January 2019</h3>
+                      <h1 th:text="${review.title}">CSS Positioning</h1>
+                      <p th:text="${review.description}"></p>
+                    </div>
+                  </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
+

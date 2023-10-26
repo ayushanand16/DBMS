@@ -1,0 +1,257 @@
+
+
+  .blue-heading {
+    width: 100%;
+    height: 8rem;
+    background-color: var(--color-midnightblue-200) ;
+    font-size: 3.56rem;
+  }
+
+  .products-name {
+    color: white;
+    font-family: var(--font-inter);
+  }
+  .astrology1 {
+    font-weight: 600;
+  }
+  .span {
+    text-decoration: underline;
+    font-weight: 300;
+  }
+  .astrology,
+  .products,
+  .readings {
+    display: inline-block;
+    height: 44px;
+    flex-shrink: 0;
+  }
+  .frame2,
+  .frame3 {
+    height: 44px;
+    flex-shrink: 0;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .frame3 {
+    width: 232px;
+    overflow: hidden;
+    display: flex;
+  }
+  .astrology,
+  .products,
+  .readings {
+    display: inline-block;
+    height: 44px;
+    flex-shrink: 0;
+  }
+  .astrology {
+    position: undefined;
+    width: 49px;
+    margin-top: 5px;
+  }
+  .products,
+  .readings {
+    position: relative;
+    text-decoration: underline;
+    font-weight: 300;
+    width: 132px;
+  }
+  .readings {
+    margin-left: -32px;
+  }
+  .frame2 {
+    width: 700px;
+    gap: 22px;
+  }
+  .frame,
+  .frame1,
+  .frame2 {
+    overflow: hidden;
+    display: flex;
+  }
+  .astrology {
+    position: undefined;
+    width: 49px;
+    margin-top: 5px;
+  }
+  .frame1 {
+    width: 1456px;
+    height: 49px;
+    flex-shrink: 0;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 500px;
+    color: white;
+    font-size: var(--font-size-9xl);
+    top: 28px;
+    font-family: var(--font-inter);
+  }
+
+  .loop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+
+  .left,.image,.right {
+    width: 12rem;
+    height: 5rem;
+    background-color: var(--color-midnightblue-200);
+  }
+  .right {
+    border-bottom-right-radius: var(--br-7xl);
+  }
+
+  .view-products,
+  .we-believe-in {
+    position: relative;
+    font-weight: 800;
+    display: inline-block;
+    width: 796px;
+    height: 409px;
+    flex-shrink: 0;
+  }
+  .view-products-wrapper {
+    border-radius: var(--br-7xl);
+    background-color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 13.838233947753906px 10.186248779296875px;
+    box-sizing: border-box;
+    position: undefined;
+    margin-top: 44px;
+    font-size: var(--font-size-9xl);
+    color: var(--color-midnightblue-100);
+  }
+  
+
+
+
+.container {
+  margin-top: 2rem;
+  width: 300px;
+  height: 400px;
+  
+  background-color: grey;
+  background-size: cover;
+  
+  -webkit-box-shadow: 0 0 5px #000;
+        box-shadow: 0 0 5px #000;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 2fr 2fr 1fr;
+  
+  background: rgba(77, 77, 77, .9);
+  color: var(--bg);
+  opacity: 0;
+  transition: all 0.5s;
+  
+  font-family: 'Playfair Display', serif;
+}
+
+
+.items {
+  padding-left: 20px;
+  letter-spacing: 3px;
+}
+
+.head {
+  font-size: 30px;
+  line-height: 40px;
+  
+  transform: translateY(40px);
+  transition: all 0.7s;
+  hr {
+    display: block;
+    width: 0;
+    
+    border: none;
+    border-bottom: solid 2px var(--bg);
+    
+    position: absolute;
+    bottom: 0; left:20px;
+    
+    transition: all .5s;
+  }
+}
+
+.price {
+  font-size: 22px;
+  line-height: 10px;
+  font-weight: bold;  
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.7s;
+  .old {
+    text-decoration: line-through;
+    color: lighten(rgb(77, 77, 77),40%);
+  }
+}
+
+.cart {
+  font-size: 12px;
+  opacity: 0;
+  letter-spacing: 1px;
+  font-family: 'Lato', sans-serif;
+  transform: translateY(40px);
+  transition: all 0.7s;
+  display: flex;
+  flex-direction: row;
+  i {
+    font-size: 16px;
+  }
+  span {
+    margin-left: 10px;
+  }
+}
+
+.container:hover .overlay {
+  opacity: 1;
+  & .head {
+    transform: translateY(0px);
+  }
+  
+  & hr {
+    width: 75px;
+    transition-delay: 0.4s;
+  }
+  
+  & .price {
+    transform: translateY(0px);
+    transition-delay: 0.3s;
+    opacity: 1;
+  }
+  
+  & .cart {
+    transform: translateY(0px);
+    transition-delay: 0.6s;
+    opacity: 1;
+  }
+}
+
+.image {
+    height: 100%;
+    width: 100%;
+}
+
+button {
+    background-color: rgba(1, 1, 0, 0);
+    border: rgba(1,1,0,0);
+    color: grey;
+}
