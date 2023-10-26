@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="/styles/cssandjs/global.css" />
+    <link rel="stylesheet" href="/styles/cssandjs/inventory.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;700;800&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=IBM Plex Sans:wght@300;400;600;700&display=swap"
+    />
+  </head>
+  <body>
+    <div class="blue-heading">
+      <div class="frame1">
+        <div class="astrology">
+          <a href="/"><span class="astrology1">Astrology</span></a>
+          <span class="span"> </span>
+        </div>
+        <div class="frame2">
+          <a th:href="@{/admin/products/add}"><div class="products" >Products</div></a>
+          <a th:href="@{/admin/courses/add}"><div class="products">Courses</div></a>
+          <div class="frame3">
+            <a th:href="@{/admin/blogs/add}"><div class="products">Blogs</div></a>
+          <a th:href="@{/admin/offers/add}"> <div class="readings">Offers</div></a>
+          </div>
+        </div>
+      </div>
+      <div class="products-name">
+        <b>Blogs</b>
+      </div>
+    </div>
+    <div class="loop">
+      <div
+        class="container"
+        th:each="blog : ${blogs}"
+        th:style="'background: url(' + @{/images/{id}(id=${blog.imageLink})} + ');'"
+      >
+        <div class="overlay">
+          <div class="items"></div>
+          <div class="items head">
+            <p th:text="${blog.title}"></p>
+            <hr />
+          </div>
+          <div class="items price">
+            <p class="new" th:text="'By '+${admin.firstName}+' '+${admin.lastName}"></p>
+          </div>
+          <div class="items cart">
+            <a th:href="@{/blogs/{id}(id=${blog.id})}">Explore  </a>
+             <form th:action="@{/admin/blogs/delete/{id}(id=${blog.id})}" method="post" id="deleteForm">
+                <button type="submit" id="deleteSubmitButton">Delete</button>
+            </form>
+            <a th:href="@{/admin/blogs/edit/{id}(id=${blog.id})}">Edit</a> 
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

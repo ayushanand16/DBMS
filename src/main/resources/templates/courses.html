@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="/styles/cssandjs/global.css" />
+    <link rel="stylesheet" href="/styles/cssandjs/inventory.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;700;800&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=IBM Plex Sans:wght@300;400;600;700&display=swap"
+    />
+  </head>
+  <body>
+    <div class="blue-heading">
+      <div class="frame1">
+        <div class="astrology">
+          <a href="/"><span class="astrology1">Astrology</span></a>
+          <span class="span"> </span>
+        </div>
+        <div class="frame2">
+          <a th:href="@{/products/all}" th:unless="${admin}"><div class="products" >Products</div></a>
+            <a th:href="@{/admin/products/add}" th:if="${admin}"><div class="products" >Products</div></a>
+            <a th:href="@{/courses/all}" th:unless="${admin}"><div class="products">Courses</div></a>
+            <a th:href="@{/admin/courses/add}" th:if="${admin}"><div class="products">Courses</div></a>
+            <a th:href="@{/clients/orders}" th:unless="${admin}"><div class="products">Orders</div></a>
+            <a th:href="@{/clients/readings/add}" th:unless="${admin}"> <div class="products">Readings</div></a>
+            <a th:href="@{/clients/cart}" th:unless="${admin}"><div class="products">Cart</div></a>
+            <a th:href="@{/blogs/all}" th:unless="${admin}"><div class="products">Blogs</div></a>
+            <a th:href="@{/admin/blogs/add}" th:if="${admin}"><div class="products">Blogs</div></a>
+            <a th:href="@{/admin/offers/add}" th:if="${admin}"> <div class="products">Offers</div></a>
+        </div>
+      </div>
+      <div class="products-name">
+        <b>Courses</b>
+      </div>
+    </div>
+    <div class="loop">
+      <div
+        class="container"
+        th:each="course : ${courses}"
+        style="background: url(https://i.pinimg.com/564x/6f/5a/b1/6f5ab1b470beeeeaf285bb451c63ac8f.jpg);"
+      >
+        <div class="overlay">
+          <div class="items"></div>
+          <div class="items head">
+            <p th:text="${course.courseName}"></p>
+            <p th:text="'Students '+${course.batchStrength}"></p>
+            <hr />
+          </div>
+          <div class="items price">
+            <p class="new" th:text="'₹'+${course.price}"></p>
+            <p class="new" th:text="${course.courseDuration}+' Days'"></p>
+          </div>
+          <div class="items cart">
+            <form
+              th:action="'/clients/courses/add/'+${course.id}"
+              method="post"
+            >
+            <button type="submit" style="cursor:pointer;">Add To Cart</button>
+            </form>
+            <a th:href="@{/courses/{id}(id=${course.id})}">Explore</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+

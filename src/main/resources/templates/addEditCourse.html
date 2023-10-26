@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="/styles/cssandjs/registerclient.css" />
+    <link rel="stylesheet" href="/styles/cssandjs/global.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;700;800&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=IBM Plex Sans:wght@400&display=swap"
+    />
+  </head>
+  <body>
+    <div class="macbook-air-1">
+      <div class="frame13">
+        <div class="frame1">
+          <div class="astrology">
+            <a href="/"><span class="astrology1">Astrology</span></a>
+            <span class="span"> </span>
+          </div>
+          <div class="frame2">
+            <a th:href="@{/admin/products/add}"><div class="products" >Products</div></a>
+            <a th:href="@{/admin/courses/add}"><div class="products">Courses</div></a>
+            <div class="frame3">
+              <a th:href="@{/admin/blogs/add}"><div class="products">Blogs</div></a>
+            <a th:href="@{/admin/offers/add}"> <div class="readings">Offers</div></a>
+            </div>
+          </div>
+        </div>
+        <div class="hey-there-container">
+          <p class="hey-there">Courses!!!</p>
+          <p class="blank-line1">
+            <span class="blank-line2">
+              <span>&nbsp;</span>
+            </span>
+          </p>
+          <p class="blank-line1">
+            <span class="blank-line2">
+              <span>&nbsp;</span>
+            </span>
+          </p>
+          <p class="blank-line1">
+            <span class="blank-line2">
+              <span>&nbsp;</span>
+            </span>
+          </p>
+          <p class="begin-your-journey-with-us-by">
+            <span class="blank-line2">
+              <span th:if="${edit}"
+                >Edit a previous course</span>
+              <span th:unless="${edit}"> Add a new course and expand our inventory</span>
+            </span>
+          </p>
+          <div class="view-products-wrapper">
+            <a th:href="@{/admin/courses}"><div class="view-products">Manage</div></a>
+          </div>
+          <p class="blank-line1">
+            <span class="blank-line2">
+              <span>&nbsp;</span>
+            </span>
+          </p>
+          <p class="blank-line1">
+            <span class="blank-line2">
+              <span>&nbsp;</span>
+            </span>
+          </p>
+          <p class="blank-line1">
+            <span class="blank-line2">
+              <span>&nbsp;</span>
+            </span>
+          </p>
+        </div>
+      </div>
+      <div class="frame14">
+        <div>
+          <div>
+            <b class="register">Course</b>
+          </div>
+          <form th:action="${edit} ? '/admin/courses/edit/' + ${course.id} : '/admin/courses/add'" method="post" enctype="multipart/form-data">
+          <div class="text-input">
+            <div class="label">Name*</div>
+            <input
+              class="label text-block"
+              type="Text"
+              name="courseName"
+              placeholder= "Name of Course"
+              th:value = "${course.courseName}"
+              required
+            />
+          </div>
+          <div class="text-input">
+            <div class="label">Price*</div>
+            <input
+              class="label text-block"
+              type="number"
+              name="price"
+              placeholder= "Cost of Course"
+              th:value = "${course.price}"
+              required
+            />
+          </div>
+          <div class="text-input">
+            <div class="label">Enrolled Students*</div>
+            <input
+              class="label text-block"
+              type="Text"
+              name="batchStrength"
+              placeholder= "Enrolled Students"
+              th:value = "${course.batchStrength}"
+              required
+            />
+          </div>
+          <button th:if="${edit}" class="register-button" type="submit">
+              Edit
+          </button>
+          <button th:unless="${edit}" class="register-button" type="submit">
+            Create
+        </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="/styles/cssandjs/registerclient.css" />
+    <link rel="stylesheet" href="/styles/cssandjs/global.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;700;800&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=IBM Plex Sans:wght@400&display=swap"
+    />
+  </head>
+  <body>
+    <div class="macbook-air-1">
+      <div class="frame13">
+        <div class="frame1">
+          <div class="astrology">
+            <a href="/"><span class="astrology1">Astrology</span></a>
+            <span class="span"> </span>
+          </div>
+          <div class="frame2">
+            <a th:href="@{/products/all}" th:unless="${admin}"><div class="products" >Products</div></a>
+            <a th:href="@{/admin/products/add}" th:if="${admin}"><div class="products" >Products</div></a>
+            <a th:href="@{/courses/all}" th:unless="${admin}"><div class="products">Courses</div></a>
+            <a th:href="@{/admin/courses/add}" th:if="${admin}"><div class="products">Courses</div></a>
+            <a th:href="@{/clients/orders}" th:unless="${admin}"><div class="products">Orders</div></a>
+            <div class="frame3">
+              <a th:href="@{/blogs/all}" th:unless="${admin}"><div class="products">Blogs</div></a>
+              <a th:href="@{/admin/blogs/add}" th:if="${admin}"><div class="products">Blogs</div></a>
+              <a th:href="@{/clients/readings/add}" th:unless="${admin}"> <div class="readings">Readings</div></a>
+              <a th:href="@{/admin/offers/add}" th:if="${admin}"> <div class="readings">Offers</div></a>
+              <a th:href="@{/clients/cart}" th:unless="${admin}"><div class="products">Cart</div></a>
+            </div>
+          </div>
+        </div>
+        <div class="hey-there-container">
+          <p class="hey-there">Hey There !!!</p>
+          <p class="blank-line1">
+            <span class="blank-line2">
+              <span>&nbsp;</span>
+            </span>
+          </p>
+          <p class="blank-line1">
+            <span class="blank-line2">
+              <span>&nbsp;</span>
+            </span>
+          </p>
+          <p class="blank-line1">
+            <span class="blank-line2">
+              <span>&nbsp;</span>
+            </span>
+          </p>
+          <p class="begin-your-journey-with-us-by">
+            <span class="blank-line2">
+              <span
+                >Begin your journey with us by submitting this registration
+                form.</span
+              >
+            </span>
+          </p>
+          <p>
+            <span>Already have an account?</span>
+          </p>
+          <div class="view-products-wrapper">
+            <a th:href="@{/login}"><div class="view-products">Login</div></a>
+          </div>
+          <p class="blank-line1">
+            <span class="blank-line2">
+              <span>&nbsp;</span>
+            </span>
+          </p>
+          <p class="blank-line1">
+            <span class="blank-line2">
+              <span>&nbsp;</span>
+            </span>
+          </p>
+          <p class="blank-line1">
+            <span class="blank-line2">
+              <span>&nbsp;</span>
+            </span>
+          </p>
+        </div>
+      </div>
+      <div class="frame14">
+        <div>
+          <div>
+            <b class="register">Register</b>
+          </div>
+          <form th:action="@{/register/client}" method="post">
+          <div class="text-input">
+            <div class="label">First Name*</div>
+            <input
+              class="label text-block"
+              type="Text"
+              name="firstname"
+              placeholder="First Name"
+              required
+            />
+          </div>
+          <div class="text-input">
+            <div class="label">Last Name*</div>
+            <input
+              class="label text-block"
+              type="Text"
+              name="lastname"
+              placeholder="Last Name"
+              required
+            />
+          </div>
+          <div class="text-input">
+            <div class="label">Email*</div>
+            <input
+              class="label text-block"
+              type="email"
+              name="email"
+              placeholder="Email"
+              required
+            />
+          </div>
+          <div class="text-input">
+            <div class="label">City*</div>
+            <input
+              class="label text-block"
+              type="Text"
+              name="city"
+              placeholder="City"
+              required
+            />
+          </div>
+          <div class="text-input">
+            <div class="label">State*</div>
+            <input
+              class="label text-block"
+              type="Text"
+              name="state"
+              placeholder="State"
+              required
+            />
+          </div>
+          <div class="text-input">
+            <div class="label">Pincode*</div>
+            <input
+              class="label text-block"
+              type="number"
+              name="pincode"
+              placeholder="Pincode"
+              required
+            />
+          </div>
+          <div class="text-input">
+            <div class="label">Password*</div>
+            <input
+              class="label text-block"
+              type="password"
+              name="password"
+              placeholder="Password"
+              required
+            />
+          </div>
+          <div class="text-input">
+            <div class="label">Confirm Password*</div>
+            <input
+              class="label text-block"
+              type="password"
+              name="confirmPassword"
+              placeholder="Confirm Password"
+              required
+            />
+          </div>
+          <div class="text-input">
+            <div class="label">Date Of Birth*</div>
+            <input
+              class="label text-block"
+              type="date"
+              name="dob"
+              required
+            />
+          </div>
+          <div class="radio">
+            <p>Gender*</p>
+            <div class="radio-options">
+              <div>
+                <input type="radio" id="male" name="gender" value="male" checked />
+                <label for="male">Male</label><br />
+              </div>
+              <div>
+                <input type="radio" id="female" name="gender" value="female" />  
+                <label for="female">Female</label><br /> 
+              </div>
+              <div>
+                <input type="radio" id="others" name="gender" value="others" />
+                <label for="others">Others</label>
+              </div>
+            </div>
+          </div>
+          <button class="register-button" type="submit">
+              Register
+          </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
