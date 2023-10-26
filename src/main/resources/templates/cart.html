@@ -42,7 +42,7 @@
         <input type="hidden" name="sum" th:value="${sum}">
         <label for="offers">Discount Available(%):</label>
         <select id="offers" name="offer" >
-            <option th:if="${offers.size()} == 0" th:value="'1'">No Offer</option>
+            <option  th:value="'1'">No Offer</option>
             <option th:each="o : ${offers} " th:if="${o.discount}>0" th:value="${o.id}" th:text="${o.discount}"></option>
         </select>
         <button th:if="${sum}>0" type="submit" th:text="'Pay: ₹ '+${sum}" style="color:white; font-weight: bolder; cursor:pointer"></button>
