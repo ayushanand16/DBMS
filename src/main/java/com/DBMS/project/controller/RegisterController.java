@@ -91,10 +91,10 @@ public class RegisterController {
         Optional<User> user2;
         user2 = userRepository.findByUserName(email);
         if(user2.isPresent()){
-            return "register";
+            return "registerClient";
         }
         if(dob.getYear() > 2003) {
-            return "register";
+            return "registerClient";
         }
         User user = new User();
         user.setUsername(email);

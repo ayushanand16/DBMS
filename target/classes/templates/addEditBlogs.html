@@ -103,14 +103,13 @@
               required></textarea>
           </div>
           <div class="text-input">
-            <div class="label">Image*</div>
+            <div class="label">Image</div>
             <input
               class="label text-block"
               type="file"
               name="imageLink"
               placeholder= "Image of Blog"
               th:value = "${blog.imageLink}"
-              required
             />
           </div>
           <button th:if="${edit}" class="register-button" type="submit">

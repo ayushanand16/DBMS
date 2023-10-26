@@ -116,14 +116,13 @@
             />
           </div>
           <div class="text-input">
-            <div class="label">Image*</div>
+            <div class="label">Image</div>
             <input
               class="label text-block"
               type="file"
               name="image"
               placeholder= "Image of Product"
               th:value = "${product.image}"
-              required
             />
           </div>
           <button th:if="${edit}" class="register-button" type="submit">
