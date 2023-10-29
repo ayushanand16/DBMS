@@ -52,7 +52,7 @@
       <div
         class="container"
         th:each="course : ${courses}"
-        style="background: url(https://i.pinimg.com/564x/6f/5a/b1/6f5ab1b470beeeeaf285bb451c63ac8f.jpg);"
+        th:style="'background: url(' + @{/images/image} + ');'"
       >
         <div class="overlay">
           <div class="items"></div>
@@ -104,7 +104,7 @@
       <div
         class="container"
         th:each="reading : ${readings}"
-        style="background: url(https://i.pinimg.com/564x/6f/5a/b1/6f5ab1b470beeeeaf285bb451c63ac8f.jpg);"
+        th:style="'background: url(' + @{/images/image} + ');'"
       >
         <div class="overlay">
           <div class="items"></div>

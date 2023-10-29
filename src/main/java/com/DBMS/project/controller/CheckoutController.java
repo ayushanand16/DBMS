@@ -57,8 +57,8 @@ public class CheckoutController {
     @Deprecated
     public String Checkout(@RequestParam long sum, @RequestParam long offer) {
         Stripe.apiKey = "sk_test_51O3kWzSFlvMw58q9quPxfZPMdy0kKzZx83Z9LGHs40fPAgmJYCgE0oXuxIXt3DGagx1srmwg8muwViLDjxU0n6BV00h0thCTsb";
-        String success = "http://localhost:8080/success/" + sum + "/" + offer + "?session_id={CHECKOUT_SESSION_ID}";
-        String cancel = "http://localhost:8080/clients/cart";
+        String success = "http://dbms-production.up.railway.app/success/" + sum + "/" + offer + "?session_id={CHECKOUT_SESSION_ID}";
+        String cancel = "http://dbms-production.up.railway.app/clients/cart";
         Optional<Offer> offerM = offerRepository.getOffer(offer);
         Long price = sum - ((sum*offerM.get().getDiscount())/100);
         SessionCreateParams params = SessionCreateParams.builder()

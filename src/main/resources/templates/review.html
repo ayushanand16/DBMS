@@ -43,7 +43,7 @@
           <div
             th:if="${Course}"
             class="container"
-            style="background: url(https://i.pinimg.com/564x/6f/5a/b1/6f5ab1b470beeeeaf285bb451c63ac8f.jpg); width:437px;"
+            th:style="'background: url(' + @{/images/image} + '); width:437px;'"
           ></div>
           <div
           th:unless="${Course}"
