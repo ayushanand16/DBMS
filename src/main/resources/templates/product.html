@@ -47,7 +47,7 @@
               style="margin-top: 10px;" method="post"><button type="submit" class="view-products" style="height:3.5rem" >Add To Cart</button></form
             >
           <div th:if="${admin}" class="view-products-wrapper" style="height:5rem;">
-            <a  th:href="@{/admin/products/edit/{id}(id=${course.id})}"
+            <a  th:href="@{/admin/products/edit/{id}(id=${product.id})}"
               ><div class="view-products">Edit</div></a
             >
           </div>

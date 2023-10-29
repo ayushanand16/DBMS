@@ -44,7 +44,7 @@
             th:style="'background: url(' + @{/images/{id}(id=${blog.imageLink})} + '); width:437px;'"
           ></div>
           <div th:if="${admin}" class="view-products-wrapper" style="height:5rem;">
-            <a  th:href="@{/admin/products/edit/{id}(id=${course.id})}"
+            <a  th:href="@{/admin/blogs/edit/{id}(id=${blog.id})}"
               ><div class="view-products">Edit</div></a
             >
           </div>
